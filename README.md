@@ -1,39 +1,32 @@
-# @architecturex/components.input
+# @architecturex/components.textarea
 
-## Input
+## TextArea
 
-This is a versatile Input component suitable for various form input scenarios.
+This is a simple React TypeScript component for a textarea form element styled with Tailwind CSS.
 
 ### Installation
 
-`npm install @architecturex/components.input`
-
-### Features
-
-- Customizable appearance with fullWidth and error props.
-- Supports all native input props.
-- Built-in focus state handling.
-
-### Props
-
-- **label (optional):** Displayed above the input.
-- **fullWidth (optional):** Makes the input take the full width of its container.
-- **error (optional):** Indicates if the input has an error, which changes its border color to red.
-- and supports all other native input attributes.
+`npm install @architecturex/components.textarea`
 
 ### Usage
 
 ```javascript
-import Input from '@architecturex/components.input'
+import TextArea from '@architecturex/components.textarea'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <Input label="Username" />
-      <Input label="Password" type="password" error={true} />
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">React TypeScript Tailwind TextArea Component</h1>
+      <form>
+        <TextArea label="Enter your message:" rows={5} placeholder="Type here..." />
+        {/* Add other form elements or submit button if needed */}
+      </form>
     </div>
-  )
-}
+  );
+};
+
+export default App;
+
 ```
 
 ### Contribution
